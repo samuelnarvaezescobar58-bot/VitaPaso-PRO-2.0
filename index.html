@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>VitaPaso PRO</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <header>
+  <h1>VitaPaso</h1>
+  <p>Mejora tus hábitos paso a paso</p>
+</header>
+
+<!-- ================= CREAR HÁBITO ================= -->
+<section>
+  <h2>Crear hábito</h2>
+
+  <div class="card">
+    <input id="habitName" placeholder="Nombre del hábito">
+    <input id="habitCategory" placeholder="Categoría (Salud, Estudio...)">
+    <select id="habitPriority">
+      <option value="alta">Alta prioridad</option>
+      <option value="media">Media prioridad</option>
+      <option value="baja">Baja prioridad</option>
+    </select>
+    <button onclick="addHabit()">Agregar hábito</button>
+  </div>
+</section>
+
+<!-- ================= LISTA ================= -->
+<section>
+  <h2>Gestión de hábitos</h2>
+
+  <div class="card">
+    <input id="searchInput" placeholder="Buscar hábito...">
+    <button onclick="filterHabits()">Buscar</button>
+    <button onclick="showAll()">Mostrar todos</button>
+  </div>
+
+  <div class="card">
+    <button onclick="filterCompleted()">Completados</button>
+    <button onclick="filterPending()">Pendientes</button>
+    <button onclick="filterFavorites()">Favoritos ⭐</button>
+  </div>
+
+  <div id="habitList"></div>
+</section>
+
+<!-- ================= PROGRESO ================= -->
+<section>
+  <h2>Progreso</h2>
+
+  <div class="card">
+    <p>Progreso diario</p>
+    <div id="progressBarContainer">
+      <div id="progressBar"></div>
+    </div>
+    <p id="progressText">0%</p>
+  </div>
+
+  <div class="card">
+    <p>Comparación</p>
+    <p id="comparisonText">Hoy vs Ayer</p>
+  </div>
+</section>
+
+<!-- ================= RACHA ================= -->
+<section>
+  <h2>Racha</h2>
+
+  <div class="card">
+    <p>Racha actual</p>
+    <p id="streak">0 días</p>
+  </div>
+
+  <div class="card">
+    <p>Mejor racha</p>
+    <p id="bestStreak">0 días</p>
+  </div>
+</section>
+
+<!-- ================= PUNTOS ================= -->
+<section>
+  <h2>Sistema de puntos</h2>
+
+  <div class="card">
+    <p>Puntos actuales</p>
+    <p id="points">0</p>
+  </div>
+
+  <div class="card">
+    <p>Nivel</p>
+    <p id="level">Nivel 1</p>
+  </div>
+</section>
+
+<!-- ================= METAS ================= -->
+<section>
+  <h2>Metas</h2>
+
+  <div class="card">
+    <input id="goalInput" placeholder="Meta diaria">
+    <button onclick="setGoal()">Guardar meta</button>
+    <p id="goalDisplay"></p>
+  </div>
+
+  <div class="card">
+    <p>Estado de meta</p>
+    <p id="goalStatus">No definida</p>
+  </div>
+</section>
+
+<!-- ================= ESTADÍSTICAS ================= -->
+<section>
+  <h2>Estadísticas</h2>
+
+  <div class="card">
+    <p>Total hábitos completados</p>
+    <p id="totalCompleted">0</p>
+  </div>
+
+  <div class="card">
+    <p>Promedio semanal</p>
+    <p id="weeklyAverage">0%</p>
+  </div>
+</section>
+
+<!-- ================= COACH ================= -->
+<section>
+  <h2>Coach</h2>
+
+  <div class="card">
+    <p id="coachMessage">Empieza creando hábitos 🚀</p>
+  </div>
+</section>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
